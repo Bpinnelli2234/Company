@@ -1,54 +1,31 @@
-# C++ objects and libs
-*.slo
-*.lo
-*.o
-*.a
-*.la
-*.lai
-*.so
-*.so.*
-*.dll
-*.dylib
+CREATE TABLE EMPLOYE
+(
+emp_id varchar(50),
+emp_name varchar (50),
+salary int,
+dept_id varchar (9),
+manager_id varchar (9),
+PRIMARY KEY (emp_id),
+) ;
 
-# Qt-es
-object_script.*.Release
-object_script.*.Debug
-*_plugin_import.cpp
-/.qmake.cache
-/.qmake.stash
-*.pro.user
-*.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-moc_*.cpp
-moc_*.h
-qrc_*.cpp
-ui_*.h
-*.qmlc
-*.jsc
-Makefile*
-*build-*
-*.qm
-*.prl
+INSERT INTO EMPLOYE VALUES
+('E1','BHARAT', 1400,'D1','M1'),
+('E2','RAJ',1500,'D1','M2'),
+('E3','ABHISHEK',1900,'D2','M1'),
+('E4','GG',2000,'D2','M3'),
+('E5','VASANTH',3333,'D3','M2');
 
-# Qt unit tests
-target_wrapper.*
+CREATE TABLE manager
+(
+manager_id varchar(50),
+manager_name varchar (50),
+dept_id varchar(50)
+) ;
 
-# QtCreator
-*.autosave
-
-# QtCreator Qml
-*.qmlproject.user
-*.qmlproject.user.*
-
-# QtCreator CMake
-CMakeLists.txt.user*
-
-# QtCreator 4.8< compilation database
-compile_commands.json
-
-# QtCreator local machine specific files for imported projects
-*creator.user*
-
-*_qmlcache.qrc
+INSERT INTO manager VALUES
+('M1','Bill','D1'),
+('M2','KIM','D2'),
+('M3','JIM','D3'),
+('M4','JOE','D4'),
+('M5','VIM','D5')
+;
